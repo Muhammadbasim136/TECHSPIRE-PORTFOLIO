@@ -1,467 +1,309 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="TechSpire - Building Digital Excellence. Full-stack web development, SEO, hosting, and deployment solutions for businesses worldwide.">
-    <title>TECHSPIRE | Building Digital Excellence</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-   <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="TechSpire - Building Digital Excellence. Full-stack web development, SEO, hosting, and deployment solutions for businesses worldwide.">
+<meta name="theme-color" content="#07070e">
+<title>TECHSPIRE | Building Digital Excellence</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-<!-- PRELOADER -->
-<div class="preloader" id="preloader"><div class="loader-ring"></div></div>
-
-<!-- NAV -->
-<nav id="navbar">
-    <div class="container">
-        <div class="logo">TECH<span>SPIRE</span></div>
-        <ul class="nav-links" id="navLinks">
-            <li><a href="#hero" class="active">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-        <div class="hamburger" id="hamburger">☰</div>
-    </div>
+<div id="preloader"><div><div class="pl-ring"></div><div class="pl-logo">TECHSPIRE</div></div></div>
+<nav id="nav">
+  <div class="nav-inner">
+    <!-- <a class="nav-logo" href="#hero">TECH<span>SPIRE</span></a> -->
+       <a class="nav-logo" href="#hero" style="display:inline-flex;align-items:center;gap:8px;">
+  <img src="./TechSpire_Logo_HQ.webp" alt="TechSpire Logo" style="height:28px;width:28px;object-fit:contain;">
+  TECH<span>SPIRE</span>
+</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#hero" class="active">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger">☰</button>
+  </div>
 </nav>
-
-<!-- HERO -->
 <section id="hero">
-    <div class="hero-bg"></div>
-    <div class="particles" id="particles"></div>
-    <div class="hero-content">
-        <div class="hero-eyebrow"><i class="fa fa-circle"></i> Available for New Projects</div>
-        <h1>We Build Digital Solutions That Perform</h1>
-        <p class="hero-tagline">TechSpire delivers full-stack web development, SEO, and deployment services — from idea to live product, end-to-end.</p>
-        <div class="role-wrap">Specializing in <span class="role-text" id="roleText">React Development</span></div>
-        <div class="cta-buttons">
-            <a href="#contact" class="btn btn-primary">Start a Project</a>
-            <a href="#projects" class="btn btn-secondary">View Our Work</a>
-        </div>
+  <canvas id="hero-canvas"></canvas>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-badge">Available for New Projects</div>
+    <h1 class="hero-h1">We Build Digital<span class="line2">Solutions That Perform</span></h1>
+    <p class="hero-sub">TechSpire delivers full-stack web development, SEO, and deployment services — from idea to live product, end-to-end.</p>
+    <div class="hero-role">Specializing in <span class="role-type" id="roleText">React Development</span></div>
+    <div class="hero-btns">
+      <a href="#contact" class="btn btn-primary"><i class="fa fa-rocket"></i> Start a Project</a>
+      <a href="#projects" class="btn btn-outline"><i class="fa fa-eye"></i> View Our Work</a>
     </div>
-    <div class="scroll-indicator"><span></span></div>
+  </div>
+  <div class="scroll-hint"><div class="scroll-mouse"></div><span>Scroll</span></div>
 </section>
-
-<!-- STATS -->
 <div id="stats">
-    <div class="container">
-        <div class="stats-grid fade-in">
-            <div class="stat-item">
-                <div class="stat-number" data-target="30">100+</div>
-                <div class="stat-label">Projects Delivered</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-number" data-target="20">99%</div>
-                <div class="stat-label">Happy Clients</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-number">10+</div>
-                <div class="stat-label">Technologies</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-number">100%</div>
-                <div class="stat-label">Client Satisfaction</div>
-            </div>
-        </div>
-    </div>
+  <div class="stats-row reveal">
+    <div class="stat"><div class="stat-n">30+</div><div class="stat-l">Projects Delivered</div></div>
+    <div class="stat"><div class="stat-n">99%</div><div class="stat-l">Happy Clients</div></div>
+    <div class="stat"><div class="stat-n">10+</div><div class="stat-l">Technologies</div></div>
+    <div class="stat"><div class="stat-n">100%</div><div class="stat-l">Client Satisfaction</div></div>
+  </div>
 </div>
-
-<!-- ABOUT -->
 <section id="about">
-    <div class="container">
-        <div class="about-grid">
-            <div class="about-text fade-in">
-                <div class="section-header">
-                    <div class="section-label">Who We Are</div>
-                    <h2 class="section-title">Building the Web, <span>The Right Way</span></h2>
-                    <p class="section-subtitle">TechSpire is a digital product studio focused on building fast, scalable, and reliable web solutions for businesses of all sizes.</p>
-                </div>
-                <p>We handle the full stack — from frontend interfaces built in React to backend APIs in Node.js, database management with MongoDB, Supabase, and Firebase, all the way through to deployment, hosting, and custom domains.</p>
-                <p>Our approach is straightforward: understand your business goals, build the right solution, and deliver it on time. No unnecessary complexity, no hidden costs.</p>
-                <div class="about-features">
-                    <div class="about-feature"><i class="fa fa-check-circle"></i> Full-Stack Development</div>
-                    <div class="about-feature"><i class="fa fa-check-circle"></i> SEO Optimization</div>
-                    <div class="about-feature"><i class="fa fa-check-circle"></i> Custom Domains</div>
-                    <div class="about-feature"><i class="fa fa-check-circle"></i> Hosting & Deployment</div>
-                    <div class="about-feature"><i class="fa fa-check-circle"></i> Firebase & Supabase</div>
-                    <div class="about-feature"><i class="fa fa-check-circle"></i> Auth Integration</div>
-                </div>
-            </div>
-            <div class="about-visual fade-in">
-                <h3>Our Tech Stack</h3>
-                <div class="tech-tags">
-                    <span class="tech-tag">React</span>
-                    <span class="tech-tag">Node.js</span>
-                    <span class="tech-tag">Express</span>
-                    <span class="tech-tag">JavaScript</span>
-                    <span class="tech-tag">HTML5 & CSS3</span>
-                    <span class="tech-tag">Firebase</span>
-                    <span class="tech-tag">Firestore</span>
-                    <span class="tech-tag">FireAuth</span>
-                    <span class="tech-tag">MongoDB</span>
-                    <span class="tech-tag">Supabase</span>
-                    <span class="tech-tag">SEO</span>
-                    <span class="tech-tag">Deployment</span>
-                    <span class="tech-tag">Custom Domains</span>
-                    <span class="tech-tag">Hosting</span>
-                </div>
-            </div>
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="reveal">
+        <div class="sec-head">
+          <span class="sec-label">Who We Are</span>
+          <h2 class="sec-title">Building the Web,<br><span>The Right Way</span></h2>
+          <p class="sec-sub">TechSpire is a digital product studio focused on building fast, scalable, and reliable web solutions for businesses of all sizes.</p>
         </div>
+        <p style="color:var(--t2);line-height:1.9;margin-bottom:18px;font-size:1.02rem">We handle the full stack — from frontend interfaces built in React to backend APIs in Node.js, database management with MongoDB, Supabase, and Firebase, all the way through to deployment, hosting, and custom domains.</p>
+        <p style="color:var(--t2);line-height:1.9;font-size:1.02rem">Our approach is straightforward: understand your business goals, build the right solution, and deliver it on time. No unnecessary complexity, no hidden costs.</p>
+        <div class="about-feats">
+          <div class="about-feat"><i class="fa fa-check-circle"></i> Full-Stack Development</div>
+          <div class="about-feat"><i class="fa fa-check-circle"></i> SEO Optimization</div>
+          <div class="about-feat"><i class="fa fa-check-circle"></i> Custom Domains</div>
+          <div class="about-feat"><i class="fa fa-check-circle"></i> Hosting &amp; Deployment</div>
+          <div class="about-feat"><i class="fa fa-check-circle"></i> Firebase &amp; Supabase</div>
+          <div class="about-feat"><i class="fa fa-check-circle"></i> Auth Integration</div>
+        </div>
+      </div>
+      <div class="stack-box reveal">
+        <div class="stack-title">Our Tech Stack</div>
+        <div class="tags">
+          <span class="tag">React</span><span class="tag">Node.js</span><span class="tag">Express</span>
+          <span class="tag">JavaScript</span><span class="tag">HTML5 &amp; CSS3</span><span class="tag">Firebase</span>
+          <span class="tag">Firestore</span><span class="tag">FireAuth</span><span class="tag">MongoDB</span>
+          <span class="tag">Supabase</span><span class="tag">SEO</span><span class="tag">Deployment</span>
+          <span class="tag">Custom Domains</span><span class="tag">Hosting</span>
+        </div>
+      </div>
     </div>
+  </div>
 </section>
-
-<!-- SERVICES -->
 <section id="services">
-    <div class="container">
-        <div class="section-header centered fade-in">
-            <div class="section-label">What We Do</div>
-            <h2 class="section-title">Services We <span>Offer</span></h2>
-            <p class="section-subtitle">From design to deployment, TechSpire covers every layer of your digital product.</p>
-        </div>
-        <div class="services-grid">
-            <div class="service-card fade-in">
-                <div class="service-icon-wrap">💻</div>
-                <div class="service-title">Frontend Development</div>
-                <p class="service-desc">Pixel-perfect, responsive interfaces built with React and modern CSS. Fast, accessible, and optimized for all devices.</p>
-            </div>
-            <div class="service-card fade-in">
-                <div class="service-icon-wrap">⚙️</div>
-                <div class="service-title">Backend Development</div>
-                <p class="service-desc">Scalable APIs and server-side logic with Node.js and Express. Reliable architecture that grows with your business.</p>
-            </div>
-            <div class="service-card fade-in">
-                <div class="service-icon-wrap">🗄️</div>
-                <div class="service-title">Database & Auth</div>
-                <p class="service-desc">MongoDB, Supabase, Firestore and Firebase Authentication — secure, real-time data storage and user management.</p>
-            </div>
-            <div class="service-card fade-in">
-                <div class="service-icon-wrap">🔍</div>
-                <div class="service-title">SEO Optimization</div>
-                <p class="service-desc">Technical SEO, meta optimization, performance tuning, and structured data to rank higher on Google.</p>
-            </div>
-            <div class="service-card fade-in">
-                <div class="service-icon-wrap">🚀</div>
-                <div class="service-title">Hosting & Deployment</div>
-                <p class="service-desc">End-to-end deployment on Vercel, Netlify, or custom servers with CI/CD pipelines and custom domain setup.</p>
-            </div>
-            <div class="service-card fade-in">
-                <div class="service-icon-wrap">🌐</div>
-                <div class="service-title">Full-Stack Web Apps</div>
-                <p class="service-desc">Complete web applications from concept to launch — frontend, backend, database, auth, and deployment, all under one roof.</p>
-            </div>
-        </div>
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="sec-label">What We Do</span>
+      <h2 class="sec-title">Services We <span>Offer</span></h2>
+      <p class="sec-sub">From design to deployment, TechSpire covers every layer of your digital product.</p>
     </div>
+    <div class="svc-grid">
+      <div class="svc-card reveal"><div class="svc-icon">💻</div><div class="svc-name">Frontend Development</div><p class="svc-desc">Pixel-perfect, responsive interfaces built with React and modern CSS. Fast, accessible, and optimized for all devices.</p></div>
+      <div class="svc-card reveal"><div class="svc-icon">⚙️</div><div class="svc-name">Backend Development</div><p class="svc-desc">Scalable APIs and server-side logic with Node.js and Express. Reliable architecture that grows with your business.</p></div>
+      <div class="svc-card reveal"><div class="svc-icon">🗄️</div><div class="svc-name">Database &amp; Auth</div><p class="svc-desc">MongoDB, Supabase, Firestore and Firebase Authentication — secure, real-time data storage and user management.</p></div>
+      <div class="svc-card reveal"><div class="svc-icon">🔍</div><div class="svc-name">SEO Optimization</div><p class="svc-desc">Technical SEO, meta optimization, performance tuning, and structured data to rank higher on Google.</p></div>
+      <div class="svc-card reveal"><div class="svc-icon">🚀</div><div class="svc-name">Hosting &amp; Deployment</div><p class="svc-desc">End-to-end deployment on Vercel, Netlify, or custom servers with CI/CD pipelines and custom domain setup.</p></div>
+      <div class="svc-card reveal"><div class="svc-icon">🌐</div><div class="svc-name">Full-Stack Web Apps</div><p class="svc-desc">Complete web applications from concept to launch — frontend, backend, database, auth, and deployment, all under one roof.</p></div>
+    </div>
+  </div>
 </section>
-
-<!-- SKILLS -->
 <section id="skills">
-    <div class="container">
-        <div class="section-header fade-in">
-            <div class="section-label">Expertise</div>
-            <h2 class="section-title">Technical <span>Proficiency</span></h2>
-            <p class="section-subtitle">Hands-on expertise across the full web development stack.</p>
-        </div>
-        <div class="skills-layout">
-            <div class="skills-category fade-in">
-                <h3>Frontend</h3>
-                <div class="skill-item">
-                    <div class="skill-header"><span class="skill-name">HTML5 & CSS3</span><span class="skill-pct">95%</span></div>
-                    <div class="skill-bar"><div class="skill-progress" data-width="95"></div></div>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-header"><span class="skill-name">JavaScript</span><span class="skill-pct">88%</span></div>
-                    <div class="skill-bar"><div class="skill-progress" data-width="88"></div></div>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-header"><span class="skill-name">React.js</span><span class="skill-pct">85%</span></div>
-                    <div class="skill-bar"><div class="skill-progress" data-width="85"></div></div>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-header"><span class="skill-name">SEO</span><span class="skill-pct">80%</span></div>
-                    <div class="skill-bar"><div class="skill-progress" data-width="80"></div></div>
-                </div>
-            </div>
-            <div class="skills-category fade-in">
-                <h3>Backend & Database</h3>
-                <div class="skill-item">
-                    <div class="skill-header"><span class="skill-name">Node.js & Express</span><span class="skill-pct">82%</span></div>
-                    <div class="skill-bar"><div class="skill-progress" data-width="82"></div></div>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-header"><span class="skill-name">Firebase & Firestore</span><span class="skill-pct">85%</span></div>
-                    <div class="skill-bar"><div class="skill-progress" data-width="85"></div></div>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-header"><span class="skill-name">MongoDB</span><span class="skill-pct">78%</span></div>
-                    <div class="skill-bar"><div class="skill-progress" data-width="78"></div></div>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-header"><span class="skill-name">Supabase</span><span class="skill-pct">75%</span></div>
-                    <div class="skill-bar"><div class="skill-progress" data-width="75"></div></div>
-                </div>
-            </div>
-        </div>
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-label">Expertise</span>
+      <h2 class="sec-title">Technical <span>Proficiency</span></h2>
+      <p class="sec-sub">Hands-on expertise across the full web development stack.</p>
     </div>
+    <div class="skills-grid">
+      <div class="reveal">
+        <div class="sk-cat-title">Frontend</div>
+        <div class="sk-item"><div class="sk-row"><span class="sk-name">HTML5 &amp; CSS3</span><span class="sk-pct">95%</span></div><div class="sk-track"><div class="sk-fill" data-w="95"></div></div></div>
+        <div class="sk-item"><div class="sk-row"><span class="sk-name">JavaScript</span><span class="sk-pct">88%</span></div><div class="sk-track"><div class="sk-fill" data-w="88"></div></div></div>
+        <div class="sk-item"><div class="sk-row"><span class="sk-name">React.js</span><span class="sk-pct">85%</span></div><div class="sk-track"><div class="sk-fill" data-w="85"></div></div></div>
+        <div class="sk-item"><div class="sk-row"><span class="sk-name">SEO</span><span class="sk-pct">80%</span></div><div class="sk-track"><div class="sk-fill" data-w="80"></div></div></div>
+      </div>
+      <div class="reveal">
+        <div class="sk-cat-title">Backend &amp; Database</div>
+        <div class="sk-item"><div class="sk-row"><span class="sk-name">Node.js &amp; Express</span><span class="sk-pct">82%</span></div><div class="sk-track"><div class="sk-fill" data-w="82"></div></div></div>
+        <div class="sk-item"><div class="sk-row"><span class="sk-name">Firebase &amp; Firestore</span><span class="sk-pct">85%</span></div><div class="sk-track"><div class="sk-fill" data-w="85"></div></div></div>
+        <div class="sk-item"><div class="sk-row"><span class="sk-name">MongoDB</span><span class="sk-pct">78%</span></div><div class="sk-track"><div class="sk-fill" data-w="78"></div></div></div>
+        <div class="sk-item"><div class="sk-row"><span class="sk-name">Supabase</span><span class="sk-pct">75%</span></div><div class="sk-track"><div class="sk-fill" data-w="75"></div></div></div>
+      </div>
+    </div>
+  </div>
 </section>
-
-<!-- PROJECTS -->
 <section id="projects">
-    <div class="container">
-        <div class="section-header centered fade-in">
-            <div class="section-label">Our Work</div>
-            <h2 class="section-title">Recent <span>Projects</span></h2>
-            <p class="section-subtitle">A selection of projects built by TechSpire — each one delivered end-to-end.</p>
-        </div>
-        <div class="projects-grid">
-            <div class="project-card fade-in">
-                <div class="project-thumb">🏨</div>
-                <div class="project-content">
-                    <div class="project-badge">Hospitality</div>
-                    <div class="project-title">Wadan Palace</div>
-                    <p class="project-desc">A premium hotel website with responsive layout, smooth animations, room showcase, and booking flow — fully deployed.</p>
-                    <div class="project-footer">
-                        <div class="project-tags">
-                            <span class="project-tag">HTML</span>
-                            <span class="project-tag">CSS</span>
-                            <span class="project-tag">JS</span>
-                        </div>
-                        <a href="https://wadan-place.netlify.app/" target="_blank" class="btn btn-primary btn-small" style="margin-left:auto">Live ↗</a>
-                    </div>
-                </div>
-            </div>
-            <div class="project-card fade-in">
-                <div class="project-thumb">🌐</div>
-                <div class="project-content">
-                    <div class="project-badge">SaaS</div>
-                    <div class="project-title">Premium SaaS UI</div>
-                    <p class="project-desc">A clean, conversion-focused SaaS landing page with interactive JavaScript features and an optimized layout.</p>
-                    <div class="project-footer">
-                        <div class="project-tags">
-                            <span class="project-tag">HTML</span>
-                            <span class="project-tag">CSS</span>
-                            <span class="project-tag">JS</span>
-                        </div>
-                        <a href="https://premium-saas-uidesign.netlify.app/" target="_blank" class="btn btn-primary btn-small" style="margin-left:auto">Live ↗</a>
-                    </div>
-                </div>
-            </div>
-            <div class="project-card fade-in">
-                <div class="project-thumb">🤖</div>
-                <div class="project-content">
-                    <div class="project-badge">Tech</div>
-                    <div class="project-title">Cyber Neon</div>
-                    <p class="project-desc">A futuristic neon-themed web project built for a tech brand — dark UI with strong visual identity.</p>
-                    <div class="project-footer">
-                        <div class="project-tags">
-                            <span class="project-tag">HTML</span>
-                            <span class="project-tag">CSS</span>
-                            <span class="project-tag">JS</span>
-                        </div>
-                        <a href="https://cyberneon-uidesign.netlify.app/" target="_blank" class="btn btn-primary btn-small" style="margin-left:auto">Live ↗</a>
-                    </div>
-                </div>
-            </div>
-            <div class="project-card fade-in">
-                <div class="project-thumb">🌳</div>
-                <div class="project-content">
-                    <div class="project-badge">Environmental</div>
-                    <div class="project-title">Green Project Agency</div>
-                    <p class="project-desc">A modern environmental agency website with clean layout, sustainability focus, and smooth scroll animations.</p>
-                    <div class="project-footer">
-                        <div class="project-tags">
-                            <span class="project-tag">HTML</span>
-                            <span class="project-tag">CSS</span>
-                            <span class="project-tag">JS</span>
-                        </div>
-                        <a href="https://pgpa-project-nga.netlify.app/" target="_blank" class="btn btn-primary btn-small" style="margin-left:auto">Live ↗</a>
-                    </div>
-                </div>
-            </div>
-            <div class="project-card fade-in">
-                <div class="project-thumb">⌚</div>
-                <div class="project-content">
-                    <div class="project-badge">E-Commerce</div>
-                    <div class="project-title">Luxury Watches</div>
-                    <p class="project-desc">A high-end watch collection website with elegant product display, interactive elements, and premium visual design.</p>
-                    <div class="project-footer">
-                        <div class="project-tags">
-                            <span class="project-tag">HTML</span>
-                            <span class="project-tag">CSS</span>
-                            <span class="project-tag">JS</span>
-                        </div>
-                        <a href="https://aurora-demo-project.netlify.app/" target="_blank" class="btn btn-primary btn-small" style="margin-left:auto">Live ↗</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="sec-label">Our Work</span>
+      <h2 class="sec-title">Recent <span>Projects</span></h2>
+      <p class="sec-sub">Hover any project to see it running live — each one delivered end-to-end.</p>
     </div>
+    <div class="proj-grid">
+      <div class="proj-card reveal">
+        <div class="proj-preview" data-url="https://royalscentofficial.online/">
+          <div class="proj-iframe-wrap"><iframe title="RoyalScent" loading="lazy"></iframe></div>
+          <div class="proj-overlay"></div>
+          <div class="proj-emoji">🌹</div>
+        </div>
+        <div class="proj-body">
+          <span class="proj-badge">E-Commerce</span>
+          <div class="proj-name">RoyalScent</div>
+          <p class="proj-desc">Luxury perfume brand for Pakistan — elegant product showcase with smooth animations and COD ordering flow.</p>
+          <div class="proj-foot"><div class="proj-techs"><span class="proj-tech">HTML</span><span class="proj-tech">CSS</span><span class="proj-tech">JS</span></div><a href="https://royalscentofficial.online/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Live ↗</a></div>
+        </div>
+      </div>
+      <div class="proj-card reveal">
+        <div class="proj-preview" data-url="https://sandwichpk.shop/">
+          <div class="proj-iframe-wrap"><iframe title="SandwichPK" loading="lazy"></iframe></div>
+          <div class="proj-overlay"></div>
+          <div class="proj-emoji">🥪</div>
+        </div>
+        <div class="proj-body">
+          <span class="proj-badge">Food &amp; Delivery</span>
+          <div class="proj-name">Sandwich PK</div>
+          <p class="proj-desc">Street-food ordering for a Karachi brand — live cart, real-time order flow, WhatsApp integration.</p>
+          <div class="proj-foot"><div class="proj-techs"><span class="proj-tech">HTML</span><span class="proj-tech">CSS</span><span class="proj-tech">JS</span></div><a href="https://sandwichpk.shop/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Live ↗</a></div>
+        </div>
+      </div>
+      <div class="proj-card reveal">
+        <div class="proj-preview" data-url="https://cyberneon-uidesign.netlify.app/">
+          <div class="proj-iframe-wrap"><iframe title="CyberNeon" loading="lazy"></iframe></div>
+          <div class="proj-overlay"></div>
+          <div class="proj-emoji">🤖</div>
+        </div>
+        <div class="proj-body">
+          <span class="proj-badge">Tech</span>
+          <div class="proj-name">Cyber Neon</div>
+          <p class="proj-desc">Futuristic neon-themed web project for a tech brand — dark UI with strong visual identity.</p>
+          <div class="proj-foot"><div class="proj-techs"><span class="proj-tech">HTML</span><span class="proj-tech">CSS</span><span class="proj-tech">JS</span></div><a href="https://cyberneon-uidesign.netlify.app/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Live ↗</a></div>
+        </div>
+      </div>
+      <div class="proj-card reveal">
+        <div class="proj-preview" data-url="https://wadan-place.netlify.app/">
+          <div class="proj-iframe-wrap"><iframe title="WadanPalace" loading="lazy"></iframe></div>
+          <div class="proj-overlay"></div>
+          <div class="proj-emoji">🏨</div>
+        </div>
+        <div class="proj-body">
+          <span class="proj-badge">Hospitality</span>
+          <div class="proj-name">Wadan Palace</div>
+          <p class="proj-desc">Premium hotel website with responsive layout, smooth animations, room showcase, and booking flow.</p>
+          <div class="proj-foot"><div class="proj-techs"><span class="proj-tech">HTML</span><span class="proj-tech">CSS</span><span class="proj-tech">JS</span></div><a href="https://wadan-place.netlify.app/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Live ↗</a></div>
+        </div>
+      </div>
+      <div class="proj-card reveal">
+        <div class="proj-preview" data-url="https://premium-saas-uidesign.netlify.app/">
+          <div class="proj-iframe-wrap"><iframe title="PremiumSaaS" loading="lazy"></iframe></div>
+          <div class="proj-overlay"></div>
+          <div class="proj-emoji">🌐</div>
+        </div>
+        <div class="proj-body">
+          <span class="proj-badge">SaaS</span>
+          <div class="proj-name">Premium SaaS UI</div>
+          <p class="proj-desc">Clean, conversion-focused SaaS landing page with interactive JavaScript features.</p>
+          <div class="proj-foot"><div class="proj-techs"><span class="proj-tech">HTML</span><span class="proj-tech">CSS</span><span class="proj-tech">JS</span></div><a href="https://premium-saas-uidesign.netlify.app/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Live ↗</a></div>
+        </div>
+      </div>
+      <div class="proj-card reveal">
+        <div class="proj-preview" data-url="https://pgpa-project-nga.netlify.app/">
+          <div class="proj-iframe-wrap"><iframe title="GreenAgency" loading="lazy"></iframe></div>
+          <div class="proj-overlay"></div>
+          <div class="proj-emoji">🌳</div>
+        </div>
+        <div class="proj-body">
+          <span class="proj-badge">Environmental</span>
+          <div class="proj-name">Green Project Agency</div>
+          <p class="proj-desc">Modern environmental agency with clean layout, sustainability focus, and smooth scroll animations.</p>
+          <div class="proj-foot"><div class="proj-techs"><span class="proj-tech">HTML</span><span class="proj-tech">CSS</span><span class="proj-tech">JS</span></div><a href="https://pgpa-project-nga.netlify.app/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Live ↗</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
-
-<!-- PROCESS -->
 <section id="process">
-    <div class="container">
-        <div class="section-header centered fade-in">
-            <div class="section-label">How We Work</div>
-            <h2 class="section-title">Our <span>Process</span></h2>
-            <p class="section-subtitle">A clear, structured process so you always know what's happening.</p>
-        </div>
-        <div class="process-grid fade-in">
-            <div class="process-step">
-                <div class="step-number">01</div>
-                <div class="step-title">Discovery</div>
-                <p class="step-desc">We understand your goals, target audience, and technical requirements before writing a single line of code.</p>
-            </div>
-            <div class="process-step">
-                <div class="step-number">02</div>
-                <div class="step-title">Planning</div>
-                <p class="step-desc">Tech stack selection, architecture design, timeline, and milestones — everything agreed upfront.</p>
-            </div>
-            <div class="process-step">
-                <div class="step-number">03</div>
-                <div class="step-title">Development</div>
-                <p class="step-desc">Clean, maintainable code with regular updates so you can see progress at every stage.</p>
-            </div>
-            <div class="process-step">
-                <div class="step-number">04</div>
-                <div class="step-title">Launch</div>
-                <p class="step-desc">Full deployment, domain setup, SEO configuration, and handover with documentation.</p>
-            </div>
-        </div>
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="sec-label">How We Work</span>
+      <h2 class="sec-title">Our <span>Process</span></h2>
+      <p class="sec-sub">A clear, structured process so you always know what's happening.</p>
     </div>
+    <div class="proc-grid reveal">
+      <div class="proc-step"><div class="proc-num-wrap"><div class="proc-circle"><span class="proc-n">01</span></div></div><div class="proc-title">Discovery</div><p class="proc-desc">We understand your goals, target audience, and technical requirements before writing a single line of code.</p></div>
+      <div class="proc-step"><div class="proc-num-wrap"><div class="proc-circle"><span class="proc-n">02</span></div></div><div class="proc-title">Planning</div><p class="proc-desc">Tech stack selection, architecture design, timeline, and milestones — everything agreed upfront.</p></div>
+      <div class="proc-step"><div class="proc-num-wrap"><div class="proc-circle"><span class="proc-n">03</span></div></div><div class="proc-title">Development</div><p class="proc-desc">Clean, maintainable code with regular updates so you can see progress at every stage.</p></div>
+      <div class="proc-step"><div class="proc-num-wrap"><div class="proc-circle"><span class="proc-n">04</span></div></div><div class="proc-title">Launch</div><p class="proc-desc">Full deployment, domain setup, SEO configuration, and handover with documentation.</p></div>
+    </div>
+  </div>
 </section>
-
-<!-- TESTIMONIALS -->
 <section id="testimonials">
-    <div class="container">
-        <div class="section-header centered fade-in">
-            <div class="section-label">Client Feedback</div>
-            <h2 class="section-title">What Clients <span>Say</span></h2>
-        </div>
-        <div class="testimonials-grid">
-            <div class="testimonial-card fade-in">
-                <div class="stars">★★★★★</div>
-                <p class="testimonial-text">"TechSpire delivered an exceptional website for our business — modern, fast, and exactly what we needed. The full deployment was seamless."</p>
-                <div class="testimonial-author">
-                    <div class="author-avatar">S</div>
-                    <div><div class="author-name">Sarah Johnson</div><div class="author-role">Business Owner</div></div>
-                </div>
-            </div>
-            <div class="testimonial-card fade-in">
-                <div class="stars">★★★★★</div>
-                <p class="testimonial-text">"Professional team, clean code, and on-time delivery. TechSpire handled both our frontend and backend — we'll definitely work with them again."</p>
-                <div class="testimonial-author">
-                    <div class="author-avatar">A</div>
-                    <div><div class="author-name">Ahmed Khan</div><div class="author-role">Startup Founder</div></div>
-                </div>
-            </div>
-            <div class="testimonial-card fade-in">
-                <div class="stars">★★★★★</div>
-                <p class="testimonial-text">"TechSpire understood our vision from day one. The end product was well-structured, fast, and the SEO setup helped us rank much faster."</p>
-                <div class="testimonial-author">
-                    <div class="author-avatar">M</div>
-                    <div><div class="author-name">Maria Rodriguez</div><div class="author-role">Creative Director</div></div>
-                </div>
-            </div>
-        </div>
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="sec-label">Client Feedback</span>
+      <h2 class="sec-title">What Clients <span>Say</span></h2>
     </div>
+    <div class="test-grid">
+      <div class="test-card reveal"><div class="test-stars">★★★★★</div><p class="test-txt">"TechSpire delivered an exceptional website — modern, fast, and exactly what we needed. The full deployment was seamless."</p><div class="test-author"><div class="test-av">S</div><div><div class="test-name">Sarah Johnson</div><div class="test-role">Business Owner</div></div></div></div>
+      <div class="test-card reveal"><div class="test-stars">★★★★★</div><p class="test-txt">"Professional team, clean code, on-time delivery. TechSpire handled both our frontend and backend — we'll work with them again."</p><div class="test-author"><div class="test-av">A</div><div><div class="test-name">Ahmed Khan</div><div class="test-role">Startup Founder</div></div></div></div>
+      <div class="test-card reveal"><div class="test-stars">★★★★★</div><p class="test-txt">"TechSpire understood our vision from day one. The SEO setup helped us rank much faster than expected."</p><div class="test-author"><div class="test-av">M</div><div><div class="test-name">Maria Rodriguez</div><div class="test-role">Creative Director</div></div></div></div>
+    </div>
+  </div>
 </section>
-
-<!-- CONTACT -->
 <section id="contact">
-    <div class="container">
-        <div class="contact-layout">
-            <div class="contact-info fade-in">
-                <div class="section-label">Get In Touch</div>
-                <h3>Let's Build Something Together</h3>
-                <p>Have a project in mind? Tell us what you need and we'll get back to you within 24 hours.</p>
-                <div class="contact-detail">
-                    <div class="contact-detail-icon"><i class="fa fa-envelope"></i></div>
-                    <div class="contact-detail-text">
-                        <div class="label">Email</div>
-                        <div class="value">techspire@gmail.com</div>
-                    </div>
-                </div>
-                <div class="contact-detail">
-                    <div class="contact-detail-icon"><i class="fab fa-whatsapp"></i></div>
-                    <div class="contact-detail-text">
-                        <div class="label">WhatsApp</div>
-                        <div class="value">0331 3847 692</div>
-                    </div>
-                </div>
-                <div class="contact-detail">
-                    <div class="contact-detail-icon"><i class="fa fa-map-marker-alt"></i></div>
-                    <div class="contact-detail-text">
-                        <div class="label">Location</div>
-                        <div class="value">Pakistan</div>
-                    </div>
-                </div>
-            </div>
-            <div class="contact-form-wrap fade-in">
-                <div class="form-group">
-                    <label for="contact-name">Your Name</label>
-                    <input type="text" id="contact-name" placeholder="e.g. Ahmed Khan">
-                </div>
-                <div class="form-group">
-                    <label for="contact-email">Email Address</label>
-                    <input type="email" id="contact-email" placeholder="e.g. ahmed@company.com">
-                    <div class="field-error" id="email-error">Please enter a valid email address.</div>
-                </div>
-                
-                <div class="form-group">
-                    <label for="contact-message">Message</label>
-                    <textarea id="contact-message" placeholder="Tell us about your project..."></textarea>
-                </div>
-                <div id="form-status"></div>
-                <button type="button" id="submit-btn" class="btn btn-primary" onclick="handleSubmit()">
-                    Send Message
-                </button>
-            </div>
-        </div>
+  <div class="wrap">
+    <div class="contact-grid">
+      <div class="reveal">
+        <span class="sec-label">Get In Touch</span>
+        <h3 class="c-head">Let's Build Something<br><span>Together</span></h3>
+        <p class="c-sub">Have a project in mind? Tell us what you need and we'll get back to you within 24 hours.</p>
+        <div class="c-item"><div class="c-icon"><i class="fa fa-envelope"></i></div><div><div class="c-lbl">Email</div><div class="c-val">techspire@gmail.com</div></div></div>
+        <div class="c-item"><div class="c-icon"><i class="fab fa-whatsapp"></i></div><div><div class="c-lbl">WhatsApp</div><div class="c-val">0331 3847 692</div></div></div>
+        <div class="c-item"><div class="c-icon"><i class="fa fa-map-marker-alt"></i></div><div><div class="c-lbl">Location</div><div class="c-val">Pakistan</div></div></div>
+      </div>
+      <div class="form-box reveal">
+        <div class="fg"><label>Your Name</label><input type="text" id="fname" placeholder="e.g. Ahmed Khan"></div>
+        <div class="fg"><label>Email Address</label><input type="email" id="femail" placeholder="e.g. ahmed@company.com"><div class="ferr" id="ferr">Please enter a valid email address.</div></div>
+        <div class="fg"><label>Message</label><textarea id="fmsg" placeholder="Tell us about your project..."></textarea></div>
+        <div id="fstatus"></div>
+        <button type="button" id="sbtn" class="btn btn-primary" onclick="doSubmit()"><i class="fa fa-paper-plane"></i> Send Message</button>
+      </div>
     </div>
+  </div>
 </section>
-
-<!-- FOOTER -->
 <footer>
-    <div class="container">
-        <div class="footer-top">
-            <div class="footer-brand">
-                <div class="logo">TECH<span style="-webkit-text-fill-color:var(--accent);color:var(--accent)">SPIRE</span></div>
-                <p>Building Digital Excellence — full-stack web development, SEO, hosting, and deployment for businesses worldwide.</p>
-            </div>
-            <div class="footer-col">
-                <h4>Services</h4>
-                <ul>
-                    <li><a href="#services">Frontend Development</a></li>
-                    <li><a href="#services">Backend Development</a></li>
-                    <li><a href="#services">Database & Auth</a></li>
-                    <li><a href="#services">SEO Optimization</a></li>
-                    <li><a href="#services">Hosting & Deployment</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Company</h4>
-                <ul>
-                    <li><a href="#about">About TechSpire</a></li>
-                    <li><a href="#projects">Our Work</a></li>
-                    <li><a href="#process">Our Process</a></li>
-                    <li><a href="#contact">Contact Us</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>© 2025 TechSpire. All rights reserved.</p>
-            <div class="social-links">
-                <a href="https://github.com/Muhammadbasim136/" title="GitHub"><i class="fab fa-github"></i></a>
-                <a href="https://wa.me/923313847692" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-            </div>
-        </div>
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <div class="foot-logo">TECHSPIRE</div>
+        <p>Building Digital Excellence — full-stack web development, SEO, hosting, and deployment for businesses worldwide.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#services">Frontend Development</a></li>
+          <li><a href="#services">Backend Development</a></li>
+          <li><a href="#services">Database &amp; Auth</a></li>
+          <li><a href="#services">SEO Optimization</a></li>
+          <li><a href="#services">Hosting &amp; Deployment</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#about">About TechSpire</a></li>
+          <li><a href="#projects">Our Work</a></li>
+          <li><a href="#process">Our Process</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+      </div>
     </div>
+    <div class="foot-bottom">
+      <p class="foot-copy">&copy; 2025 TechSpire. All rights reserved.</p>
+      <div class="socials">
+        <a href="https://github.com/Muhammadbasim136/" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://wa.me/923313847692" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+  </div>
 </footer>
-
 <script src="app.js"></script>
 </body>
 </html>
