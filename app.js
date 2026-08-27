@@ -89,7 +89,7 @@ async function doSubmit(){
   if(bad)return;
   btn.disabled=true;btn.innerHTML='<i class="fa fa-spinner fa-spin"></i> Sending...';
   try{
-    const r=await fetch('https://portfolio-website-backend-kohl.vercel.app/contact',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({name:n.value.trim(),email:em.value.trim(),message:msg.value.trim()})});
+    const r=await fetch('/contact',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({name:n.value.trim(),email:em.value.trim(),message:msg.value.trim()})});
     const d=await r.json();
     if(d.success){st.className='ok';st.innerHTML='&#10003; Message sent! We\'ll be in touch within 24 hours.';n.value=em.value=msg.value='';btn.innerHTML='<i class="fa fa-check"></i> Sent';setTimeout(()=>{btn.innerHTML='<i class="fa fa-paper-plane"></i> Send Message';btn.disabled=false;st.style.display='none'},5000);}
     else throw 0;
